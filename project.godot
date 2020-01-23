@@ -19,6 +19,11 @@ config/name="2d-platform-demo"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=640
+window/size/height=320
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
