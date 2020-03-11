@@ -1,0 +1,17 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 640.0
+margin_bottom = 320.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 224.0
+margin_top = 112.0
+margin_right = 432.0
+margin_bottom = 176.0
+text = "Você ganhou!"
+align = 1
+valign = 1

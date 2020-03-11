@@ -69,4 +69,8 @@ func update_direction():
 	movement.x = -int(self.controll['left']) + int(self.controll['right'])
 
 func die():
-	print('meu player morreu')
+	get_tree().change_scene('res://lose.tscn')
+
+func win():
+	get_tree().change_scene('res://win.tscn')
+	
