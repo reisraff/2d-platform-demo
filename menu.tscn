@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://menu.gd" type="Script" id=1]
+[ext_resource path="res://Back.png" type="Texture" id=2]
+[ext_resource path="res://Mid.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "default"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, 0 ), Vector2( 0, 0 ), Vector2( -32, 0 ), Vector2( -64, 0 ), Vector2( -32, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "default"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -32, 0 ), Vector2( 0, 0 ), Vector2( -32, 0 ), Vector2( -64, 0 ), Vector2( -32, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 256.0 ],
+"_edit_vertical_guides_": [ 0.0, 640.0, 16.0, 160.0 ]
+}
+
+[node name="animacao" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="animacao"]
+editor/display_folded = true
+position = Vector2( -11.8807, 0 )
+scale = Vector2( 0.34375, 0.3125 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="animacao/Sprite"]
+playback_speed = 0.5
+anims/default = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="animacao"]
+editor/display_folded = true
+position = Vector2( -38.9879, 0 )
+scale = Vector2( 0.34375, 0.3125 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="animacao/Sprite2"]
+anims/default = SubResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 16.0
+margin_top = 160.0
+margin_right = 160.0
+margin_bottom = 256.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+margin_right = 144.0
+margin_bottom = 96.0
+
+[node name="play" type="Button" parent="Control/VBoxContainer"]
+margin_right = 144.0
+margin_bottom = 20.0
+text = "Play"
+[connection signal="pressed" from="Control/VBoxContainer/play" to="." method="_on_play_pressed"]
