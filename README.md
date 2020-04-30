@@ -1,4 +1,4 @@
-# Developing 2D Games
+# Course - Developing 2D Games
 
 ![Presentation GIF](https://github.com/reisraff/2d-platform-demo/raw/master/presentation.gif)
 
