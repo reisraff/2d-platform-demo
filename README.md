@@ -1,4 +1,4 @@
-# Curso de GODOT 2D (Programando Jogos 2D)
+# Developing 2D Games
 
 ![Presentation GIF](https://github.com/reisraff/2d-platform-demo/raw/master/presentation.gif)
 
