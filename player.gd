@@ -10,6 +10,8 @@ const JUMP_STEP = 2
 var motion = Vector2()
 var movement = Vector2(0, 1)
 
+signal add_one_apple
+
 var controll = {
 	'up': false,
 	'down': false,
@@ -74,3 +76,5 @@ func die():
 func win():
 	get_tree().change_scene('res://win.tscn')
 	
+func got_one_apple():
+	emit_signal("add_one_apple")
