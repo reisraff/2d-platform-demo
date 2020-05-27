@@ -6,6 +6,10 @@ This is a repository used in the free course offered by [Mente Binária](https:/
 
 ![Presentation GIF](https://github.com/reisraff/2d-platform-demo/raw/master/presentation.gif)
 
+# Download
+
+[Linux 64](https://github.com/reisraff/2d-platform-demo/raw/master/dist/linux.zip) | [Windows 64](https://github.com/reisraff/2d-platform-demo/raw/master/dist/windows.zip) | [Web assembly](https://github.com/reisraff/2d-platform-demo/raw/master/dist/web.zip)
+
 # Credits
 
 [Mente Binária](https://mentebinaria.com.br/)
